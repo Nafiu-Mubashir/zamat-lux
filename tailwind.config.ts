@@ -13,6 +13,12 @@ const config: Config = {
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
+      colors: {
+        "zamat-main": "#FB5B39",
+        "zamat-background-light": "#FFBFB140",
+        "zamat-neutrals": "#3C3433",
+        "zamat-border-color": "#FFBFB1",
+      },
     },
   },
   plugins: [],
