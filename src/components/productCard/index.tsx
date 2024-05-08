@@ -3,8 +3,13 @@ import Image from 'next/image'
 import React, { useState } from 'react'
 
 import { Rating } from '@mantine/core';
+interface ProductCardProp {
+  name: string;
+  img: string;
+  price?: string;
+}
 
-const ProductCard = () => {
+const ProductCard = ({name, img, price}:ProductCardProp) => {
   const [ratings, setRatings] = useState<{ [key: number]: number }>({});
    // Function to handle rating change
    const handleRatingChange = (value: number) => {
@@ -14,14 +19,13 @@ const ProductCard = () => {
       // [itemId]: value,
     }));
 
-    console.log(`Rating for item ${value}`);
   }
   return (
     <div className='w-[18.75rem] rounded-lg bg-white shadow-lg'>
-      <Image src='/product.png' width={300} height={261} alt='product image' className='rounded-t-lg' />
+      <Image src={img} width={300} height={261} alt='product image' className='rounded-t-lg' />
       <div className='p-3 space-y-2'>
         <div className='flex justify-between items-center'>
-          <p className='text-zamat-neutrals text-[1.125rem] font-[400]'>Gucci Bag</p>
+          <p className='text-zamat-neutrals text-[1.125rem] font-[400]'>{name}</p>
           <ShoppingCart size="25" color="#FB5B39" className='p-1 bg-zamat-background-light rounded-full'/>
         </div>
         <div className="flex items-center gap-2">
@@ -30,9 +34,10 @@ const ProductCard = () => {
           <div className='bg-zamat-background-light text-zamat-main text-[0.75rem] rounded-full px-2'>-20%</div>
         </div>
 
-        <div>
+        <div className="flex items-center gap-2">
         <Rating className='' fractions={2} onChange={(value) => handleRatingChange(value)} /> 
         {/* <span>{ratings[item.id] || 0}/5</span> */}
+        <span className="text-sm">0/5</span>
         </div>
       </div>
     </div>
