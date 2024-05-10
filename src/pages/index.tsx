@@ -1,6 +1,5 @@
 import { Inter } from "next/font/google";
 import Image from 'next/image'
-import Footer from "~/components/footer"
 import ProductCard from "~/components/productCard";
 import HeroSection from "~/sections/home-section/heroSection";
 
@@ -69,32 +68,32 @@ export default function Home() {
           <Grid className="p-3 lg:p-6 py-8">
             <Grid.Col span={{ base: 12, lg: 4 }}>
               <div className="relative">
-                <Image src='/home/shoes.png' width={408} height={289} alt="browse by product" className="w-full h-[8.611rem] lg:h-[18.063rem] rounded-lg" />
+                <Image src='/home/shoes.png' width={408} height={289} alt="browse by product" className="w-[20.375rem] lg:w-full h-[8.611rem] lg:h-[18.063rem] rounded-lg" />
                 <span className="px-3 py-1 backdrop-blur-lg bg-white/60 rounded-2xl absolute top-2 left-5">Shoes</span>
               </div>
             </Grid.Col>
             <Grid.Col span={{ base: 12, lg: 8 }}>
               <div className="relative">
-                <Image src='/home/bags.png' width={685} height={289} alt="browse by product" className="w-full h-[8.611rem] lg:h-[18.063rem] rounded-lg" />
+                <Image src='/home/bags.png' width={685} height={289} alt="browse by product" className="w-[20.375rem] lg:w-full h-[8.611rem] lg:h-[18.063rem] rounded-lg" />
                 <span className="px-3 py-1 backdrop-blur-lg bg-white/60 rounded-2xl absolute top-2 left-5">Bags</span>
               </div>
             </Grid.Col>
             <Grid.Col span={{ base: 12, lg: 8 }}>
               <div className="relative">
-                <Image src='/home/wears.png' width={685} height={289} alt="browse by product" className="w-full h-[8.611rem] lg:h-[18.063rem] rounded-lg" />
+                <Image src='/home/wears.png' width={685} height={289} alt="browse by product" className="w-[20.375rem] lg:w-full h-[8.611rem] lg:h-[18.063rem] rounded-lg" />
                 <span className="px-3 py-1 backdrop-blur-lg bg-white/60 rounded-2xl absolute top-2 left-5">Wears</span>
               </div>
             </Grid.Col>
             <Grid.Col span={{ base: 12, lg: 4 }}>
               <div className="relative">
-                <Image src='/home/scents.png' width={408} height={289} alt="browse by product" className="w-full h-[8.611rem] lg:h-[18.063rem] rounded-lg" />
+                <Image src='/home/scents.png' width={408} height={289} alt="browse by product" className="w-[20.375rem] lg:w-full h-[8.611rem] lg:h-[18.063rem] rounded-lg" />
                 <span className="px-3 py-1 backdrop-blur-lg bg-white/60 rounded-2xl absolute top-2 left-5">Scents</span>
               </div>
             </Grid.Col>
           </Grid>
         </div>
 
-        <div className="p-2 lg:p-4 space-y-6 w-full lg:w-[90%] mx-auto">
+        <div className="p-2 lg:p-4 space-y-6 w-[95%] lg:w-[90%] mx-auto">
           <h1 className="text-center text-[1.25rem] lg:text-[3rem]">Top Selling</h1>
           <div className="flex justify-between gap-4 overflow-x-scroll lg:overflow-hidden py-3">
             {
@@ -108,7 +107,6 @@ export default function Home() {
         </div>
       </div>
 
-      <Footer />
     </main>
   );
 }

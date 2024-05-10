@@ -1,13 +1,13 @@
 import "~/styles/globals.css";
-import '@mantine/core/styles.css';
+import "@mantine/core/styles.css";
 
-import NextAdapterApp from 'next-query-params/app';
+import { NextPage } from "next";
+import NextAdapterApp from "next-query-params/app";
 import type { AppProps } from "next/app";
-import { QueryParamProvider } from 'use-query-params';
-import { NextPage } from 'next';
+import { QueryParamProvider } from "use-query-params";
+import Footer from "~/components/footer";
 
-import { MantineProvider } from '@mantine/core';
-
+import { MantineProvider } from "@mantine/core";
 
 type NextPageWithLayout<P = {}, IP = P> = NextPage<P, IP> & {
   getLayout?: (page: React.ReactElement) => React.ReactNode;
@@ -27,7 +27,11 @@ export default function App({ Component, pageProps }: AppPropsWithLayout) {
   return (
     <QueryParamProvider adapter={NextAdapterApp}>
       <MantineProvider theme={theme}>
-        {getLayout(<Component {...pageProps} />)}
+        <div className="bg-zamat-background-light">
+          {getLayout(<Component {...pageProps} />)}
+        </div>
+
+        <Footer />
       </MantineProvider>
     </QueryParamProvider>
   );

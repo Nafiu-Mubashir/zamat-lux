@@ -5,3 +5,87 @@
 body{
   background-color: #FFBFB140;
 }
+
+label {
+  cursor: pointer;
+}
+
+label:hover {
+  letter-spacing: 0.5em;
+  transition: 2s;
+}
+/* label::after {
+    content: attr(for)
+  } */
+  input {
+  display: none;
+}
+label {
+  /* display: inline-block;
+  border: solid 1px;
+  padding: 1em;
+  font-size: 20px;
+  color: #808080; */
+}
+label::before {
+  display: inline-block;
+  content: "";
+  width: 2.313rem;
+  height: 2.313rem;
+  margin-right: 5px;
+  margin-top: 5px;
+  border-radius: 100%;
+}
+/* Define color styles for each label */
+[for="green"]::before {
+  background-color: #00C12B;
+}
+
+[for="red"]::before {
+  background-color: #F50606;
+}
+
+[for="yellow"]::before {
+  background-color: #F5DD06;
+}
+
+[for="orange"]::before {
+  background-color: #F57906;
+}
+
+[for="light-blue"]::before {
+  background-color: #06CAF5;
+}
+
+[for="blue"]::before {
+  background-color: blue;
+}
+
+[for="purple"]::before {
+  background-color: #7D06F5;
+}
+
+[for="pink"]::before {
+  background-color: #F506A4;
+}
+
+[for="white"]::before {
+  background-color: white;
+}
+
+[for="black"]::before {
+  background-color: black;
+}
+
+
+.shop {
+       animation: spin 10s linear infinite;
+     }
+     @keyframes spin {
+       from {
+         transform: rotate(0deg);
+       }
+       to {
+         transform: rotate(360deg);
+       }
+     }

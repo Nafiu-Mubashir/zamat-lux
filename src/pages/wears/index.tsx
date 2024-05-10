@@ -1,8 +1,18 @@
+import { log } from "console";
+
 import Link from "next/link";
+import { useState } from "react";
 import ProductCard from "~/components/productCard";
 import SinglePageLayout from "~/layout";
 
-import { Divider, Grid } from "@mantine/core";
+import { Button, Divider, Grid } from "@mantine/core";
+
+interface Color {
+  id: string;
+  hueRotate: string;
+}
+
+
 
 const Wears = () => {
   const wear = [
@@ -24,13 +34,36 @@ const Wears = () => {
     },
   ];
 
+  const sizes = ['XX-Small', 'X-Small', 'Small', 'Medium', 'Large', 'X-Large', 'XX-Large', '3X-Large', '4X-Large']
+
+  const colors: Color[] = [
+    { id: "green", hueRotate: "120deg" }, // Green
+    { id: "red", hueRotate: "0deg" }, // Red
+    { id: "yellow", hueRotate: "60deg" }, // Yellow
+    { id: "orange", hueRotate: "30deg" }, // Orange
+    { id: "light-blue", hueRotate: "180deg" }, // Light Blue
+    { id: "blue", hueRotate: "240deg" }, // Blue
+    { id: "purple", hueRotate: "280deg" }, // Purple
+    { id: "pink", hueRotate: "330deg" }, // Pink
+    { id: "white", hueRotate: "0deg" }, // White (no hue rotation)
+    { id: "black", hueRotate: "0deg" }, // Black (no hue rotation)
+  ];
+
+  const [selectedColor, setSelectedColor] = useState<string | null>(null);
+
+  const handleColorChange = (colorId: string) => {
+    setSelectedColor(colorId);
+   console.log(colorId);
+   
+  };
+
   return (
     <div className="w-full lg:w-[95%] mx-auto p-3 space-y-10">
       <Grid>
         <Grid.Col
           span={{ base: 12, lg: 3 }}
-          className="!hidden lg:!block">
-          <div className="rounded-2xl border border-zamat-main p-4">
+          className="!hidden md:!block">
+          <div className="rounded-2xl border border-zamat-main p-4 space-y-3">
             <div className="flex justify-between items-center">
               <p className="font-bold ">Filters</p>
               <svg
@@ -45,7 +78,49 @@ const Wears = () => {
                 />
               </svg>
             </div>
+
             <Divider my={"md"} />
+
+            <div className="space-y-2">
+              <h1 className="font-semibold">Colors</h1>
+              <div className="flex flex-wrap gap-2">
+                {colors.map((color) => (
+                  <div key={color.id}>
+                    <input
+                      type="radio"
+                      name="color"
+                      id={color.id}
+                      onChange={() => handleColorChange(color.id)}
+                      className="hidden"
+                    />
+                    <label
+                      htmlFor={color.id}></label>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <Divider my={"md"} />
+
+            <div className="space-y-2">
+              <h1 className="font-semibold">Size</h1>
+              <div className="flex flex-wrap gap-4">
+                {sizes.map((item, id) => (
+                  <div
+                    key={id}
+                    className="text-center border bg-[#EBE8E7] rounded-full p-2 w-[6.188rem] text-[0.875rem]">
+                    {item}
+                  </div>
+                ))}
+              </div>
+            </div>
+            <Button
+              classNames={{
+                root: "!bg-black !w-full",
+              }}
+              radius={100}>
+              Apply Filter
+            </Button>
           </div>
         </Grid.Col>
         <Grid.Col
@@ -75,7 +150,9 @@ const Wears = () => {
           <div>
             <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
               {wear.map(({ name, img }, id) => (
-                <Link href={`/wears/${id}`} key={id}>
+                <Link
+                  href={`/wears/${id}`}
+                  key={id}>
                   <ProductCard
                     name={name}
                     img={img}

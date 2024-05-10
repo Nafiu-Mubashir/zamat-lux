@@ -7,9 +7,8 @@ const HeroSection = () => {
     <div>
       <div className="bg-zamat-main">
         <Navbar />
-        
-        <div className="mx-auto w-[95%] py-4 space-y-6">
 
+        <div className="mx-auto w-[95%] py-4 space-y-6">
           <div>
             <div className="flex items-center gap-3  justify-center flex-wrap lg:w-[80%] mx-auto">
               <h1 className="text-[1.652rem] lg:text-[5rem] text-white font-[600]">
@@ -35,7 +34,7 @@ const HeroSection = () => {
                   stroke-width="5"
                 />
               </svg>
-              
+
               {/* </div>
 
         <div className="flex items-center gap-3 justify-center mb-8"> */}
@@ -64,39 +63,38 @@ const HeroSection = () => {
                 {"Step Into Zamat's"}
               </h1>
             </div>
-
           </div>
-          <div className="flex justify-evenly items-center gap-">
+          <div className="flex justify-evenly md:items-center gap-">
             <Image
               src="/home/men.png"
               width={301}
               height={326}
               alt="Hero image"
-              className="w-[8.238rem] lg:w-auto h-[8.909rem] lg:h-auto"
+              className="w-[8rem] lg:w-auto h-[8rem] lg:h-auto"
             />
-            <div className="relative hidden md:block">
+            <div className="relative hidde md:block">
               <Image
-              src="/home/mid-hero-img.png"
-              width={364}
-              height={584}
-              alt="Hero image"
-              className="w-[10.348rem] lg:w-[21.875rem] h-[16.911rem] lg:h-[35.748rem]"
-            />
+                src="/home/mid-hero-img.png"
+                width={364}
+                height={584}
+                alt="Hero image"
+                className="w-[14.348rem] lg:w-[21.875rem] h-[10.911rem] lg:h-[35.748rem] mt-[100px]"
+              />
 
-            <Image
-              src="/home/shop-now.png"
-              width={162}
-              height={161}
-              alt="Hero image"
-              className="w-[] lg:w-[] h-[] lg:h-[] absolute top-[250px] right-[-50px]"
-            />
+              <Image
+                src="/home/shop-now.png"
+                width={162}
+                height={161}
+                alt="Hero image"
+                className="w-[3.5rem] lg:w-[7rem] h-[3.5rem] lg:h-[7rem] absolute top-[180px] lg:top-[450px] right-[-25px] lg:right-[-45px] shop"
+              />
             </div>
             <Image
               src="/home/women.png"
               width={288}
               height={301}
               alt="Hero image"
-              className="w-[7.211ren] lg:w-auto h-[7.53rem] lg:h-auto"
+              className="w-[7ren] lg:w-auto h-[7rem] lg:h-auto"
             />
           </div>
         </div>
@@ -109,8 +107,15 @@ const HeroSection = () => {
           alt="Hero image"
           className="w-[5.145rem] lg:w-[] h-[1.025rem] lg:h-[]"
         />
-        <svg viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-[0.618rem] lg:w-[1.25rem] h-[0.618rem] lg:h-[1.25rem]">
-          <path d="M10.347 0C10.6865 5.37596 14.971 9.66052 20.347 10C14.971 10.3395 10.6865 14.624 10.347 20C10.0075 14.624 5.72291 10.3395 0.346954 10C5.72291 9.66052 10.0075 5.37596 10.347 0Z" fill="#FFF8F7" />
+        <svg
+          viewBox="0 0 21 20"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          className="w-[0.618rem] lg:w-[1.25rem] h-[0.618rem] lg:h-[1.25rem]">
+          <path
+            d="M10.347 0C10.6865 5.37596 14.971 9.66052 20.347 10C14.971 10.3395 10.6865 14.624 10.347 20C10.0075 14.624 5.72291 10.3395 0.346954 10C5.72291 9.66052 10.0075 5.37596 10.347 0Z"
+            fill="#FFF8F7"
+          />
         </svg>
 
         <Image
@@ -120,8 +125,15 @@ const HeroSection = () => {
           alt="Hero image"
           className="w-[2.812rem] lg:w-[] h-[1.174rem] lg:h-[]"
         />
-        <svg viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-[0.618rem] lg:w-[1.25rem] h-[0.618rem] lg:h-[1.25rem]">
-          <path d="M10.347 0C10.6865 5.37596 14.971 9.66052 20.347 10C14.971 10.3395 10.6865 14.624 10.347 20C10.0075 14.624 5.72291 10.3395 0.346954 10C5.72291 9.66052 10.0075 5.37596 10.347 0Z" fill="#FFF8F7" />
+        <svg
+          viewBox="0 0 21 20"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          className="w-[0.618rem] lg:w-[1.25rem] h-[0.618rem] lg:h-[1.25rem]">
+          <path
+            d="M10.347 0C10.6865 5.37596 14.971 9.66052 20.347 10C14.971 10.3395 10.6865 14.624 10.347 20C10.0075 14.624 5.72291 10.3395 0.346954 10C5.72291 9.66052 10.0075 5.37596 10.347 0Z"
+            fill="#FFF8F7"
+          />
         </svg>
 
         <Image
@@ -131,8 +143,15 @@ const HeroSection = () => {
           alt="Hero image"
           className="w-[4.821rem] lg:w-[] h-[1.113rem] lg:h-[]"
         />
-        <svg viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg" className="hidden md:block w-[0.618rem] lg:w-[1.25rem] h-[0.618rem] lg:h-[1.25rem]">
-          <path d="M10.347 0C10.6865 5.37596 14.971 9.66052 20.347 10C14.971 10.3395 10.6865 14.624 10.347 20C10.0075 14.624 5.72291 10.3395 0.346954 10C5.72291 9.66052 10.0075 5.37596 10.347 0Z" fill="#FFF8F7" />
+        <svg
+          viewBox="0 0 21 20"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          className="hidden md:block w-[0.618rem] lg:w-[1.25rem] h-[0.618rem] lg:h-[1.25rem]">
+          <path
+            d="M10.347 0C10.6865 5.37596 14.971 9.66052 20.347 10C14.971 10.3395 10.6865 14.624 10.347 20C10.0075 14.624 5.72291 10.3395 0.346954 10C5.72291 9.66052 10.0075 5.37596 10.347 0Z"
+            fill="#FFF8F7"
+          />
         </svg>
 
         <Image
@@ -142,8 +161,15 @@ const HeroSection = () => {
           alt="Hero image"
           className="w-[5.995rem] lg:w-[] h-[0.989rem] lg:h-[]"
         />
-        <svg viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-[0.618rem] lg:w-[1.25rem] h-[0.618rem] lg:h-[1.25rem]">
-          <path d="M10.347 0C10.6865 5.37596 14.971 9.66052 20.347 10C14.971 10.3395 10.6865 14.624 10.347 20C10.0075 14.624 5.72291 10.3395 0.346954 10C5.72291 9.66052 10.0075 5.37596 10.347 0Z" fill="#FFF8F7" />
+        <svg
+          viewBox="0 0 21 20"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          className="w-[0.618rem] lg:w-[1.25rem] h-[0.618rem] lg:h-[1.25rem]">
+          <path
+            d="M10.347 0C10.6865 5.37596 14.971 9.66052 20.347 10C14.971 10.3395 10.6865 14.624 10.347 20C10.0075 14.624 5.72291 10.3395 0.346954 10C5.72291 9.66052 10.0075 5.37596 10.347 0Z"
+            fill="#FFF8F7"
+          />
         </svg>
 
         <Image
