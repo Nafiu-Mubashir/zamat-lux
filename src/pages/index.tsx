@@ -1,8 +1,8 @@
 import { Inter } from "next/font/google";
 import Image from 'next/image'
+import Footer from "~/components/footer"
 import ProductCard from "~/components/productCard";
 import HeroSection from "~/sections/home-section/heroSection";
-import Footer from "~/components/footer"
 
 import { Button, Grid } from '@mantine/core';
 

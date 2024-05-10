@@ -21,16 +21,16 @@ const ProductCard = ({name, img, price}:ProductCardProp) => {
 
   }
   return (
-    <div className='w-[18.75rem] rounded-lg bg-white shadow-lg'>
+    <div className='w-[10.875rem lg:w-[18.75rem] rounded-lg bg-white shadow-lg'>
       <Image src={img} width={300} height={261} alt='product image' className='rounded-t-lg' />
       <div className='p-3 space-y-2'>
         <div className='flex justify-between items-center'>
-          <p className='text-zamat-neutrals text-[1.125rem] font-[400]'>{name}</p>
-          <ShoppingCart size="25" color="#FB5B39" className='p-1 bg-zamat-background-light rounded-full'/>
+          <p className='text-zamat-neutrals text-[0.536rem] lg:text-[1.125rem] font-[400]'>{name}</p>
+          <ShoppingCart size="" color="#FB5B39" className='p-1 w-[0.894rem] h-[0.894rem] bg-zamat-background-light rounded-full'/>
         </div>
         <div className="flex items-center gap-2">
-          <p className='text-[1.5rem] font-[600]'>$240</p>
-          <p className='text-gray-500 text-[1rem]'>$260</p>
+          <p className='text-[0.715rem] lg:text-[1.5rem] font-[600]'>$240</p>
+          <p className='text-gray-500 text-[0.715rem] lg:text-[1rem]'>$260</p>
           <div className='bg-zamat-background-light text-zamat-main text-[0.75rem] rounded-full px-2'>-20%</div>
         </div>
 

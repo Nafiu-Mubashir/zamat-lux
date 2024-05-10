@@ -7,11 +7,11 @@ const HeroSection = () => {
     <div>
       <div className="bg-zamat-main">
         <Navbar />
-
+        
         <div className="mx-auto w-[95%] py-4 space-y-6">
 
           <div>
-            <div className="flex items-center gap-3  justify-center flex-wrap lg:w-[90%] mx-auto">
+            <div className="flex items-center gap-3  justify-center flex-wrap lg:w-[80%] mx-auto">
               <h1 className="text-[1.652rem] lg:text-[5rem] text-white font-[600]">
                 Step Into Luxury
               </h1>
@@ -35,6 +35,7 @@ const HeroSection = () => {
                   stroke-width="5"
                 />
               </svg>
+              
               {/* </div>
 
         <div className="flex items-center gap-3 justify-center mb-8"> */}
