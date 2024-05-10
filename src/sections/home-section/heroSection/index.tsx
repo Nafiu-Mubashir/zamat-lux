@@ -10,59 +10,20 @@ const HeroSection = () => {
 
         <div className="mx-auto w-[95%] py-4 space-y-6">
           <div>
-            <div className="flex items-center gap-3  justify-center flex-wrap lg:w-[80%] mx-auto">
-              <h1 className="text-[1.652rem] lg:text-[5rem] text-white font-[600]">
-                Step Into Luxury
-              </h1>
-              <svg
-                width="238"
-                height="101"
-                viewBox="0 0 238 101"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-                className="w-[4.914rem] lg:w-auto h-[2.066rem] lg:h-auto">
-                <rect
-                  width="238"
-                  height="100.07"
-                  rx="50.0352"
-                  transform="matrix(-1 0 0 1 238 0)"
-                  fill="#292424"
-                />
-                <path
-                  d="M95.6667 20C95.6667 23.1837 91.3908 27.9379 87.0625 31.9283C81.4975 37.0772 74.8475 41.5696 67.2233 44.9979C61.5067 47.568 54.5767 50.0352 49 50.0352M49 50.0352C54.5767 50.0352 61.5125 52.5024 67.2233 55.0725C74.8475 58.5051 81.4975 62.9975 87.0625 68.1378C91.3908 72.1325 95.6667 76.8953 95.6667 80.0704M49 50.0352L189 50.0352"
-                  stroke="#FFF8F7"
-                  stroke-width="5"
-                />
-              </svg>
-
-              {/* </div>
-
-        <div className="flex items-center gap-3 justify-center mb-8"> */}
-              <svg
-                width="200"
-                height="101"
-                viewBox="0 0 200 101"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-                className="w-[4.914rem] lg:w-auto h-[2.066rem] lg:h-auto">
-                <rect
-                  y="0.0704041"
-                  width="200"
-                  height="100.07"
-                  rx="50.0352"
-                  fill="#FFF8F7"
-                />
-                <path
-                  d="M123.333 20.0704C123.333 23.2541 127.609 28.0083 131.937 31.9987C137.502 37.1476 144.152 41.64 151.777 45.0683C157.493 47.6384 164.423 50.1056 170 50.1056M170 50.1056C164.423 50.1056 157.487 52.5728 151.777 55.1429C144.152 58.5755 137.502 63.0679 131.937 68.2083C127.609 72.2029 123.333 76.9657 123.333 80.1408M170 50.1056L30 50.1056"
-                  stroke="#FB5B39"
-                  stroke-width="5"
-                />
-              </svg>
-
-              <h1 className="text-[1.652rem] lg:text-[5rem] text-white font-[600]">
-                {"Step Into Zamat's"}
-              </h1>
-            </div>
+            <Image
+              src="/header-desktop.png"
+              width={1100}
+              height={211}
+              alt="Hero image"
+              className="hidden md:block mx-auto"
+            />
+            <Image
+              src="/header-mobile.png"
+              width={365}
+              height={97}
+              alt="Hero image"
+              className="md:hidden block mx-auto"
+            />
           </div>
           <div className="flex justify-evenly md:items-center gap-">
             <Image
@@ -70,7 +31,7 @@ const HeroSection = () => {
               width={301}
               height={326}
               alt="Hero image"
-              className="w-[8rem] lg:w-auto h-[8rem] lg:h-auto"
+              className="w-[8rem] lg:w-auto h-[8rem] lg:h-auto mt-[-40px] md:mt-0"
             />
             <div className="relative hidde md:block">
               <Image
@@ -78,7 +39,7 @@ const HeroSection = () => {
                 width={364}
                 height={584}
                 alt="Hero image"
-                className="w-[10.348rem] lg:w-[21.875rem] h-[15.911rem] lg:h-[35.748rem] mt-[100px]"
+                className="w-[10.348rem] lg:w-[21.875rem] h-[16.911rem] lg:h-[35.748rem] mt-[100px] md:mt-0"
               />
 
               <Image
@@ -86,7 +47,7 @@ const HeroSection = () => {
                 width={162}
                 height={161}
                 alt="Hero image"
-                className="w-[3.5rem] lg:w-[7rem] h-[3.5rem] lg:h-[7rem] absolute top-[180px] lg:top-[450px] right-[-25px] lg:right-[-45px] shop"
+                className="w-[3.5rem] lg:w-[7rem] h-[3.5rem] lg:h-[7rem] absolute top-[180px] lg:top-[300px] right-[-25px] lg:right-[-45px] shop"
               />
             </div>
             <Image
@@ -94,7 +55,7 @@ const HeroSection = () => {
               width={288}
               height={301}
               alt="Hero image"
-              className="w-[7ren] lg:w-auto h-[7rem] lg:h-auto"
+              className="w-[6ren] md:w-auto lg:w-auto h-[6rem] lg:h-auto"
             />
           </div>
         </div>
