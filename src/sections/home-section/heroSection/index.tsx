@@ -78,7 +78,7 @@ const HeroSection = () => {
                 width={364}
                 height={584}
                 alt="Hero image"
-                className="w-[14.348rem] lg:w-[21.875rem] h-[10.911rem] lg:h-[35.748rem] mt-[100px]"
+                className="w-[10.348rem] lg:w-[21.875rem] h-[15.911rem] lg:h-[35.748rem] mt-[100px]"
               />
 
               <Image
