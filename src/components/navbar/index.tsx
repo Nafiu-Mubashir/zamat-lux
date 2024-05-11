@@ -45,7 +45,7 @@ const Navbar = () => {
     <nav
       className={`bg-white ${isNavbarPosition} w-full z-20 top-0 start-0 py-2 lg:py-0 `}
       ref={navbarRef}>
-      <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-2 md:p-4">
+      <div className="w-[95%] lg:w-[90%] mx-suto flex flex-wrap items-center justify-between mx-auto p-2 md:p-4">
         <div className="block lg:hidden">
           <Sidebar />
         </div>

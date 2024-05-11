@@ -15,10 +15,14 @@ const PaymentInfo = () => {
   
   return (
     <div className="">
-      <div className="rounded-lg border lg:w-[26.5rem] p-4 md:p-6 space-y-4 border-zamat-border-color">
-        <h1 className="text-[1.5rem] font-[600]">Payment Information</h1>
+      <div className="rounded-lg border lg:w-[26.5rem p-4 md:p-6 space-y-4 border-zamat-border-color">
+        <p className="text-[0.873rem] md:text-[1.5rem] font-[600]">
+          Payment Information
+        </p>
         <div className="space-y-2">
-          <h3 className="text-[1rem] font-[600]">Apply Discount</h3>
+          <p className="text-[0.582rem] md:text-[1rem] font-[600]">
+            Apply Discount
+          </p>
           <div className="flex gap-3">
             <TextInput
               label=""
@@ -28,7 +32,7 @@ const PaymentInfo = () => {
               size="md"
               className="lg:!w-[15.125rem]"
               classNames={{
-                input: "focus:!border-zamat-border-color"
+                input: "focus:!border-zamat-border-color",
               }}
             />
             <Button
@@ -46,8 +50,11 @@ const PaymentInfo = () => {
             // onChange={setValue}
             // name="favoriteFramework"
             label="Pay With"
+            classNames={{
+              label: "!text-[0.582rem] md:!text-[1rem]",
+            }}
             // description="This is anonymous"
-            className="space-y-2">
+            className="space-y-3">
             {cardOption.map((item, id) => (
               <Radio
                 key={id}
@@ -56,6 +63,7 @@ const PaymentInfo = () => {
                 className="mb-2 capitalize border-gray-300 "
                 classNames={{
                   icon: "!focus:ring-red-500  !focus:ring-2",
+                  label: "!text-[0.509rem] md:!text-[0.875rem]",
                 }}
               />
             ))}
@@ -63,9 +71,11 @@ const PaymentInfo = () => {
         </div>
 
         <Divider my={"md"} />
-        
+
         <div className="space-y-2">
-          <h3 className="text-[1rem] font-[600]">Enter Card Information</h3>
+          <p className="text-[0.582rem] md:text-[1rem] font-[600]">
+            Enter Card Information
+          </p>
           <div className="space-y-3">
             <TextInput
               label="Cardholder Name"
@@ -75,7 +85,8 @@ const PaymentInfo = () => {
               size="md"
               className=""
               classNames={{
-                input: "focus:!border-zamat-border-color"
+                input: "focus:!border-zamat-border-color",
+                label: "!text-[0.509rem] md:!text-[0.875rem]",
               }}
             />
             <NumberInput
@@ -86,23 +97,24 @@ const PaymentInfo = () => {
               size="md"
               className=""
               classNames={{
-                input: "focus:!border-zamat-border-color"
+                input: "focus:!border-zamat-border-color",
+                label: "!text-[0.509rem] md:!text-[0.875rem]",
               }}
               hideControls
             />
             <div className="flex gap-3">
-              <div className="full">
+              <div className="w-[90%]">
                 <label
                   htmlFor="date"
-                  className="block font-medium">
+                  className="block font-medium text-[0.509rem] md:text-[0.875rem]">
                   Expiry Date
                 </label>
                 <input
                   type="month"
                   name=""
-                  id=""
+                  id="date"
                   // onChange={(e) => setDate(e.currentTarget.value)}
-                  className=" px-4 border-gray-200 focus:outline-zamat-border-color focus:ring-zamat-border-color py-1 focus:border-zamat-border-color"
+                  className="px-4 border-gray-200 focus:outline-zamat-border-color bg-white focus:ring-zamat-border-color py-1 focus:border-zamat-border-color"
                 />
               </div>
 
@@ -111,87 +123,86 @@ const PaymentInfo = () => {
                 description=""
                 placeholder="123"
                 hideControls
+                size="md"
                 classNames={{
-                  input: "focus:!border-zamat-border-color"
+                  input: "focus:!border-zamat-border-color",
+                  label: "!text-[0.509rem] md:!text-[0.875rem]",
                 }}
               />
             </div>
 
-            <div>
-              
-            </div>
+            <div></div>
           </div>
         </div>
 
-         <Divider my={"md"} />
+        <Divider my={"md"} />
 
-         <div className="space-y-2">
-          
-<ul className="max-w-md ">
-  {
-    productDetails.map(({subTotal, tax, shipping}, id) => (
-       <li className="pb-3 sm:pb-4 space-y-2" key={id}>
-      <div className="flex items-center space-x-4 rtl:space-x-reverse">
-         <div className="flex-1 min-w-0">
-            <p className="text-sm text-gray-900 truncate">
-               Sub Total
-            </p>
-         </div>
-         <div className="inline-flex items-center text-sm text-gray-900">
-            {subTotal}
-         </div>
-      </div>
-       <div className="flex items-center space-x-4 rtl:space-x-reverse">
-         <div className="flex-1 min-w-0">
-            <p className="text-sm text-gray-900 truncate">
-               Tax (10%)
-            </p>
-         </div>
-         <div className="inline-flex items-center text-sm text-gray-900">
-            {tax}
-         </div>
-      </div>
-       <div className="flex items-center space-x-4 rtl:space-x-reverse">
-         <div className="flex-1 min-w-0">
-            <p className="text-sm text-gray-900 truncate">
-               Shipping
-            </p>
-         </div>
-         <div className="inline-flex items-center text-sm text-gray-900">
-           {shipping}
-         </div>
-      </div>
-   </li>
-    ))
-  }
-</ul>
+        <div className="space-y-2">
+          <ul className="max-w-md ">
+            {productDetails.map(({ subTotal, tax, shipping }, id) => (
+              <li
+                className="pb-3 sm:pb-4 space-y-2"
+                key={id}>
+                <div className="flex items-center space-x-4 rtl:space-x-reverse">
+                  <div className="flex-1 min-w-0">
+                    <p className="text-[0.509rem] md:text-[0.875rem] font-[500] text-gray-900 truncate">
+                      Sub Total
+                    </p>
+                  </div>
+                  <div className="inline-flex items-center text-[0.509rem] md:text-[0.875rem] font-[500] text-gray-900">
+                    {subTotal}
+                  </div>
+                </div>
+                <div className="flex items-center space-x-4 rtl:space-x-reverse">
+                  <div className="flex-1 min-w-0">
+                    <p className="text-[0.509rem] md:text-[0.875rem] font-[500] text-gray-900 truncate">
+                      Tax (10%)
+                    </p>
+                  </div>
+                  <div className="inline-flex items-center text-[0.509rem] md:text-[0.875rem] font-[500] text-gray-900">
+                    {tax}
+                  </div>
+                </div>
+                <div className="flex items-center space-x-4 rtl:space-x-reverse">
+                  <div className="flex-1 min-w-0">
+                    <p className="text-[0.509rem] md:text-[0.875rem] font-[500] text-gray-900 truncate">
+                      Shipping
+                    </p>
+                  </div>
+                  <div className="inline-flex items-center text-[0.509rem] md:text-[0.875rem] font-[500] text-gray-900">
+                    {shipping}
+                  </div>
+                </div>
+              </li>
+            ))}
+          </ul>
 
-<Divider my={"md"} />
+          <Divider my={"md"} />
 
-<div>
-  <ul className="max-w-md ">
-    <li className="pb-3 sm:pb-4 space-y-2" >
-      <div className="flex items-center space-x-4 rtl:space-x-reverse">
-         <div className="flex-1 min-w-0">
-            <p className="text-sm text-gray-900 truncate">
-               Sub Total
-            </p>
-         </div>
-         <div className="inline-flex items-center font-semibold text-sm text-gray-900">
-            $614.00
-         </div>
-      </div>
-      </li>
-      </ul>
-</div>
+          <div>
+            <ul className="max-w-md ">
+              <li className="pb-3 sm:pb-4 space-y-2">
+                <div className="flex items-center space-x-4 rtl:space-x-reverse">
+                  <div className="flex-1 min-w-0">
+                    <p className="text-[0.509rem] md:text-[0.875rem] font-[500] text-gray-900 truncate">
+                      Sub Total
+                    </p>
+                  </div>
+                  <div className="inline-flex items-center  text-[0.509rem] md:text-[0.875rem] font-[500] text-gray-900">
+                    $614.00
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
 
-<Button
-              className="!bg-zamat-main !w-full"
-              radius={100}
-              size="md">
-              Pay $614.00
-            </Button>
-         </div>
+          <Button
+            className="!bg-zamat-main !w-full"
+            radius={100}
+            size="md">
+            Pay $614.00
+          </Button>
+        </div>
       </div>
     </div>
   );

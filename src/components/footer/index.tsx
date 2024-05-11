@@ -14,7 +14,7 @@ const Footer = () => {
   ];
   const faq = ["Account", "Manage Deliveries", "Orders", "Payments"];
   return (
-    <footer className="bg-white lg:py-10 relative w-full top-[15rem]">
+    <footer className="bg-white lg:py-10 relative w-full top-[10rem]">
       <div className="mx-auto w-[90%] p-2 lg:p-4 py-16 lg:py-8 space-y-10 mt-20">
         <Grid>
           <Grid.Col span={{ base: 12, xs: 4, lg: 3 }}>

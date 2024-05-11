@@ -1,9 +1,9 @@
 import { Inter } from "next/font/google";
-import Image from 'next/image'
+import Image from "next/image";
 import ProductCard from "~/components/productCard";
 import HeroSection from "~/sections/home-section/heroSection";
 
-import { Button, Grid } from '@mantine/core';
+import { Button, Grid } from "@mantine/core";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -71,60 +71,32 @@ export default function Home() {
 
         <div className="w-full lg:w-[90%] mx-auto py-3 lg:p-6 lg:rounded-3xl bg-[#FFBFB180]">
           <h1 className="text-center text-[1.25rem] lg:text-[3rem] uppercase">
-            BROWSE BY Product Line
+            Browse By Product Line
           </h1>
           <Grid className="px-6 py-8">
             <Grid.Col span={{ base: 12, xs: 4, lg: 4 }}>
-              <div className="relative">
-                <Image
-                  src="/home/shoes.png"
-                  width={408}
-                  height={289}
-                  alt="browse by product"
-                  className="w-full h-[8.611rem] lg:h-[18.063rem] rounded-lg"
-                />
+              <div className="relative bg-[url(/home/shoes.png)] bg-left-bottom bg-no-repeat bg-cover w-full h-[8.611rem] lg:h-[18.063rem] rounded-lg">
                 <span className="px-3 py-1 backdrop-blur-lg bg-white/60 rounded-2xl absolute top-2 left-5">
                   Shoes
                 </span>
               </div>
             </Grid.Col>
             <Grid.Col span={{ base: 12, xs: 8, lg: 8 }}>
-              <div className="relative">
-                <Image
-                  src="/home/bags.png"
-                  width={685}
-                  height={289}
-                  alt="browse by product"
-                  className="w-full h-[8.611rem] lg:h-[18.063rem] rounded-lg"
-                />
+              <div className="relative bg-[url(/home/bags.png)] bg-cover w-full h-[8.611rem] lg:h-[18.063rem] rounded-lg">
                 <span className="px-3 py-1 backdrop-blur-lg bg-white/60 rounded-2xl absolute top-2 left-5">
                   Bags
                 </span>
               </div>
             </Grid.Col>
             <Grid.Col span={{ base: 12, xs: 8, lg: 8 }}>
-              <div className="relative">
-                <Image
-                  src="/home/wears.png"
-                  width={685}
-                  height={289}
-                  alt="browse by product"
-                  className="w-full h-[8.611rem] lg:h-[18.063rem] rounded-lg"
-                />
+              <div className="relative bg-[url(/home/wears.png)] bg-cover w-full h-[8.611rem] lg:h-[18.063rem] rounded-lg">
                 <span className="px-3 py-1 backdrop-blur-lg bg-white/60 rounded-2xl absolute top-2 left-5">
                   Wears
                 </span>
               </div>
             </Grid.Col>
             <Grid.Col span={{ base: 12, xs: 4, lg: 4 }}>
-              <div className="relative">
-                <Image
-                  src="/home/scents.png"
-                  width={408}
-                  height={289}
-                  alt="browse by product"
-                  className="w-full h-[8.611rem] lg:h-[18.063rem] rounded-lg"
-                />
+              <div className="relative bg-[url(/home/scents.png)] bg-cover bg-center w-full h-[8.611rem] lg:h-[18.063rem] rounded-lg">
                 <span className="px-3 py-1 backdrop-blur-lg bg-white/60 rounded-2xl absolute top-2 left-5">
                   Scents
                 </span>
