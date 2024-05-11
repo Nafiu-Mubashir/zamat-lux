@@ -52,7 +52,7 @@ const AuthLayout = ({
       <nav
         className={`bg-white ${isNavbarPosition} w-full z-20 top-0 start-0 py-2 lg:py-0 `}
         ref={navbarRef}>
-        <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-2 md:p-4">
+        <div className="w-[95%] flex flex-wrap items-center justify-between mx-auto p-2 md:p-4">
           <div className="block lg:hidden">
             <Sidebar />
           </div>
@@ -69,7 +69,7 @@ const AuthLayout = ({
           </Link>
 
           <div
-            className="items-center justify-between hidden w-full lg:flex md:w-auto "
+            className="items-center justify-between hidden lg:flex md:w-auto "
             id="navbar-sticky">
             <Image
               width={300}

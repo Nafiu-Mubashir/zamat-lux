@@ -9,7 +9,7 @@ const SignUp = () => {
   return (
     <div className="w-[90%] md:w-[43.75rem] mx-auto text-black space-y-5 mt-6">
       <h1 className="text-center font-[600] md:text-[1.708rem]">
-        Welcome Back
+        Create Account
       </h1>
       <div className="grid grid-cols-2 gap-3">
         <TextInput
