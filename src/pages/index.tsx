@@ -73,7 +73,7 @@ export default function Home() {
           <h1 className="text-center text-[1.25rem] lg:text-[3rem] uppercase">
             BROWSE BY Product Line
           </h1>
-          <Grid className="p-4 lg:p-6 py-8">
+          <Grid className="px-6 py-8">
             <Grid.Col span={{ base: 12, xs: 4, lg: 4 }}>
               <div className="relative">
                 <Image
@@ -123,7 +123,7 @@ export default function Home() {
                   width={408}
                   height={289}
                   alt="browse by product"
-                  className="w-[20.375rem] mx-auto md:w-full h-[8.611rem] lg:h-[18.063rem] rounded-lg"
+                  className="w-full h-[8.611rem] lg:h-[18.063rem] rounded-lg"
                 />
                 <span className="px-3 py-1 backdrop-blur-lg bg-white/60 rounded-2xl absolute top-2 left-5">
                   Scents

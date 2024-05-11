@@ -8,21 +8,21 @@ const HeroSection = () => {
       <div className="bg-zamat-main">
         <Navbar />
 
-        <div className="mx-auto w-[95%] py-4 space-y-6">
+        <div className="mx-auto w-full p-3 md:ps-0 md:w-[95%] py-4 space-y-6">
           <div>
             <Image
-              src="/header-desktop.png"
+              src="/header-desktop.svg"
               width={1100}
               height={211}
               alt="Hero image"
-              className="hidden md:block mx-auto"
+              className="hidden md:block mx-auto w-[95%]"
             />
             <Image
-              src="/header-mobile.png"
+              src="/header-mobile.svg"
               width={365}
               height={97}
               alt="Hero image"
-              className="md:hidden block mx-auto"
+              className="md:hidden block mx-auto w-[95%]"
             />
           </div>
           <div className="flex justify-evenly md:items-center gap-">
@@ -31,7 +31,7 @@ const HeroSection = () => {
               width={301}
               height={326}
               alt="Hero image"
-              className="w-[8rem] lg:w-auto h-[8rem] lg:h-auto mt-[-40px] md:mt-0"
+              className="w-[8rem] md:w-auto h-[8rem] md:h-[10rem] lg:h-auto mt-[-40px] md:mt-0"
             />
             <div className="relative hidde md:block">
               <Image
@@ -47,7 +47,7 @@ const HeroSection = () => {
                 width={162}
                 height={161}
                 alt="Hero image"
-                className="w-[3.5rem] lg:w-[7rem] h-[3.5rem] lg:h-[7rem] absolute top-[180px] lg:top-[300px] right-[-25px] lg:right-[-45px] shop"
+                className="w-[3.5rem] lg:w-[7rem] h-[3.5rem] lg:h-[7rem] absolute top-[250px] md:top-[150px] lg:top-[300px] right-[-25px] lg:right-[-45px] shop"
               />
             </div>
             <Image
@@ -55,12 +55,12 @@ const HeroSection = () => {
               width={288}
               height={301}
               alt="Hero image"
-              className="w-[6ren] md:w-auto lg:w-auto h-[6rem] lg:h-auto"
+              className="w-[7.211rem] md:w-auto lg:w-auto h-[6rem] md:h-[10rem] lg:h-auto"
             />
           </div>
         </div>
       </div>
-      <div className="bg-black p-4 flex items-center justify-center lg:justify-between flex-wrap gap-2 space-y-1 lg:gap-0 px-4 lg:px-10">
+      <div className="bg-black p-4 flex items-center justify-center md:justify-between flex-wrap gap-2 space-y-1 md:gap-0 px-4 lg:px-10">
         <Image
           src="/home/versarce.png"
           width={168}
@@ -108,7 +108,7 @@ const HeroSection = () => {
           viewBox="0 0 21 20"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
-          className="hidden md:block w-[0.618rem] lg:w-[1.25rem] h-[0.618rem] lg:h-[1.25rem]">
+          className="w-[0.618rem] lg:w-[1.25rem] h-[0.618rem] lg:h-[1.25rem]">
           <path
             d="M10.347 0C10.6865 5.37596 14.971 9.66052 20.347 10C14.971 10.3395 10.6865 14.624 10.347 20C10.0075 14.624 5.72291 10.3395 0.346954 10C5.72291 9.66052 10.0075 5.37596 10.347 0Z"
             fill="#FFF8F7"

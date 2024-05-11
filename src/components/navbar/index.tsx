@@ -2,10 +2,12 @@ import { ProfileCircle, SearchNormal1, ShoppingCart } from "iconsax-react";
 import Image from "next/image";
 import Link from "next/link";
 import React, { useEffect, useRef, useState } from "react";
+
 import Sidebar from "../sidebar";
+import { NavLink } from "./navLink";
 
 const Navbar = () => {
-   const [isNavbarPosition, setIsNavbarPosition] = useState('sticky');
+  const [isNavbarPosition, setIsNavbarPosition] = useState("sticky");
   const navbarRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
@@ -18,13 +20,13 @@ const Navbar = () => {
         console.log(scrollY);
 
         if (scrollY > 10) {
-          setIsNavbarPosition('fixed');
+          setIsNavbarPosition("fixed");
         } else {
-          setIsNavbarPosition('sticky');
+          setIsNavbarPosition("sticky");
         }
       }
     };
-   const obsv = new IntersectionObserver(() => {
+    const obsv = new IntersectionObserver(() => {
       // Your intersection observer logic goes here
     });
 
@@ -32,15 +34,17 @@ const Navbar = () => {
       obsv.observe(navbarRef.current);
     }
 
-    document.addEventListener('scroll', handleScroll);
+    document.addEventListener("scroll", handleScroll);
 
     return () => {
-      document.removeEventListener('scroll', handleScroll);
+      document.removeEventListener("scroll", handleScroll);
       obsv.disconnect();
     };
-  }, [])
+  }, []);
   return (
-    <nav className={`bg-white ${isNavbarPosition} w-full z-20 top-0 start-0 py-2 lg:py-0 `} ref={navbarRef}>
+    <nav
+      className={`bg-white ${isNavbarPosition} w-full z-20 top-0 start-0 py-2 lg:py-0 `}
+      ref={navbarRef}>
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-2 md:p-4">
         <div className="block lg:hidden">
           <Sidebar />
@@ -62,19 +66,10 @@ const Navbar = () => {
           id="navbar-sticky">
           <ul className="flex flex-col p-4 md:p-0 mt-4 text-[1.125rem] font-medium md:space-x-12 md:flex-row md:mt-0 rtl:space-x-reverse relative">
             <li className=" z-10">
-              <Link
-                href="/wears"
-                className="block py-2 px-3 text-white md:p-0 cursor-pointer"
-                aria-current="page">
-                Wears
-              </Link>
+              <NavLink href="/wears">Wears</NavLink>
             </li>
             <li className=" z-10">
-              <Link
-                href="/shoes"
-                className="block py-2 px-3 md:p-0 cursor-pointer text-white">
-                Shoes
-              </Link>
+              <NavLink href="/shoes">Shoes</NavLink>
             </li>
             <li className=" ">
               <Image
@@ -86,18 +81,10 @@ const Navbar = () => {
               />
             </li>
             <li className=" z-10">
-              <Link
-                href="/bags"
-                className="block py-2 px-3 md:p-0 cursor-pointer text-white">
-                Bags
-              </Link>
+              <NavLink href="/bags">Bags</NavLink>
             </li>
             <li className=" z-10">
-              <Link
-                href="/perfumes"
-                className="block py-2 px-3 md:p-0 cursor-pointer text-white">
-                Perfumes
-              </Link>
+              <NavLink href="/perfumes">Perfumes</NavLink>
             </li>
           </ul>
         </div>

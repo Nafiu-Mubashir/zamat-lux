@@ -12,28 +12,21 @@ body{
   background-color: #FFBFB140;
 }
 
-label {
+.label {
   cursor: pointer;
 }
 
-label:hover {
+.label:hover {
   letter-spacing: 0.5em;
   transition: 2s;
 }
-/* label::after {
+/* .label::after {
     content: attr(for)
   } */
   input {
   display: none;
 }
-label {
-  /* display: inline-block;
-  border: solid 1px;
-  padding: 1em;
-  font-size: 20px;
-  color: #808080; */
-}
-label::before {
+.label::before {
   display: inline-block;
   content: "";
   width: 2.313rem;

@@ -14,7 +14,7 @@ const Footer = () => {
   ];
   const faq = ["Account", "Manage Deliveries", "Orders", "Payments"];
   return (
-    <footer className="bg-white lg:py-10 relative w-full top-24">
+    <footer className="bg-white lg:py-10 relative w-full top-[15rem] border border-blue-400">
       <div className="mx-auto w-[90%] lg:p-4 py-6 lg:py-8 space-y-10 mt-20">
         <Grid>
           <Grid.Col span={{ base: 12, xs: 4, lg: 3 }}>
@@ -140,48 +140,30 @@ const Footer = () => {
         </div>
       </div>
 
-      <div className="bg-black rounded-xl lg:rounded-3xl py-4 px-3 lg:px-[3rem] w-[95%] lg:w-[90%] h-[10.328rem] lg:h-[12.5rem] mx-auto absolute right-0 left-0 top-[-150px] lg:top-[-80px] ">
-
-        <Grid align='center'>
-            <Grid.Col span={{ base: 12, lg: 8 }}>
-                <h1 className="font-[600] text-center lg:text-left text-[1.484rem] lg:text-[3rem] text-white w-full lg:w-[41.731rem]">
-          STAY UPTO DATE ABOUT OUR LATEST OFFERS
-        </h1>
-            </Grid.Col>
-            <Grid.Col span={{ base: 12, lg: 4 }}>
-             <div className="space-y-4 hidden lg:block">
-          <Input
-            placeholder="Your email"
-            type="email"
-            leftSection={<></>}
-            classNames={{
-              input:
-                "!rounded-full !w-[20rem] !h-[1.484rem] lg:!w-[21.813rem] lg:!h-[3rem] px-4 focus:border-none focus:ring-none focus:outline-none",
-            }}
-          />
-          <Button className="!rounded-full !w-[20rem] !h-[1.484rem] lg:!w-[21.813rem] px-4 lg:!h-[3rem] !bg-zamat-main text-white">
-            Subscribe to Newsletter
-          </Button>
-        </div>
-            </Grid.Col>
-            </Grid>
-        {/* <h1 className="font-[600] text-center lg:text-left text-[1.484rem] lg:text-[3rem] text-white w-full lg:w-[41.731rem]">
-          STAY UPTO DATE ABOUT OUR LATEST OFFERS
-        </h1> */}
-        {/* <div className="space-y-4">
-          <Input
-            placeholder="Your email"
-            type="email"
-            leftSection={<></>}
-            classNames={{
-              input:
-                "!rounded-full !w-[20rem] !h-[1.484rem] lg:!w-[21.813rem] lg:!h-[3rem] px-4 focus:border-none focus:ring-none focus:outline-none",
-            }}
-          />
-          <Button className="!rounded-full !w-[20rem] !h-[1.484rem] lg:!w-[21.813rem] px-4 lg:!h-[3rem] !bg-zamat-main text-white">
-            Subscribe to Newsletter
-          </Button>
-        </div> */}
+      <div className="bg-black rounded-xl lg:rounded-3xl py-2 lg:px-[3rem] w-[95%] lg:w-[90%] h-[14rem] lg:h-[12.5rem] mx-auto absolute right-0 left-0 top-[-150px] lg:top-[-80px] ">
+        <Grid align="center">
+          <Grid.Col span={{ base: 12, lg: 8 }}>
+            <h1 className="font-[600] text-center lg:text-left text-[1.484rem] lg:text-[3rem] text-white w-full lg:w-[41.731rem]">
+              STAY UPTO DATE ABOUT OUR LATEST OFFERS
+            </h1>
+          </Grid.Col>
+          <Grid.Col span={{ base: 12, lg: 4 }}>
+            <div className="space-y-4 ">
+              <Input
+                placeholder="Your email"
+                type="email"
+                leftSection={<></>}
+                classNames={{
+                  input:
+                    "!rounded-full !w-[90%] !h-[2.5rem] !mx-auto lg:!w-[21.813rem] lg:!h-[3rem] px-4 focus:border-none focus:ring-none focus:outline-none",
+                }}
+              />
+              <Button className="!rounded-full !w-[90%] !block !mx-auto !h-[2.5rem] lg:!w-[21.813rem] px-4 lg:!h-[3rem] !bg-zamat-main text-white">
+                Subscribe to Newsletter
+              </Button>
+            </div>
+          </Grid.Col>
+        </Grid>
       </div>
     </footer>
   );

@@ -27,7 +27,7 @@ const ProductCard = ({ name, img, price }: ProductCardProp) => {
         width={300}
         height={261}
         alt="product image"
-        className="rounded-t-lg"
+        className="rounded-t-lg w-full"
       />
       <div className="p-3 space-y-2">
         <div className="flex justify-between items-center">
@@ -53,7 +53,7 @@ const ProductCard = ({ name, img, price }: ProductCardProp) => {
             className=""
             fractions={2}
             onChange={(value) => handleRatingChange(value)}
-            // size={"sm"}
+            size={"sm"}
           />
           {/* <span>{ratings[item.id] || 0}/5</span> */}
           <span className="text-sm">0/5</span>

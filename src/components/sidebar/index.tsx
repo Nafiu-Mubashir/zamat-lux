@@ -1,8 +1,9 @@
 import { HambergerMenu, Logout } from "iconsax-react";
-import { useDisclosure } from "@mantine/hooks";
-import { Drawer, Button } from "@mantine/core";
 import Image from "next/image";
 import Link from "next/link";
+
+import { Button, Drawer } from "@mantine/core";
+import { useDisclosure } from "@mantine/hooks";
 
 const Sidebar = () => {
    const [opened, { open, close }] = useDisclosure(false);
@@ -13,8 +14,8 @@ const Sidebar = () => {
         onClose={close}
         title=""
         classNames={{
-          header: "!bg-[#BCB6B5]",
-          content: "!bg-[#BCB6B5]"
+          header: "",
+          content: ""
         }}>
         <div className="space-y-10">
           <Image
