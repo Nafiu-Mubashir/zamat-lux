@@ -126,11 +126,11 @@ const ProductFilter = () => {
 
         <div className="space-y-2">
           <h1 className="font-semibold">Size</h1>
-          <div className="flex flex-wrap gap-4">
+          <div className="md:grid md:grid-cols-2 lg:flex lg:flex-wrap gap-2 ">
             {sizes.map((item, id) => (
               <div
                 key={id}
-                className="text-center border bg-[#EBE8E7] rounded-full p-2 w-[6.188rem] text-[0.875rem]">
+                className="text-center border bg-[#EBE8E7] rounded-full p-1 lg:p-2 w-[4.5rem] lg:w-[6.188rem] text-[0.7rem] lg:text-[0.875rem]">
                 {item}
               </div>
             ))}

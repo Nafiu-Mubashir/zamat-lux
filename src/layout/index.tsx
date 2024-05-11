@@ -1,9 +1,8 @@
-import React from 'react'
-import Navbar from '~/components/navbar'
-import { useRouter } from 'next/router';
 import { ArrowRight2 } from 'iconsax-react';
 import Link from 'next/link';
-
+import { useRouter } from 'next/router';
+import React from 'react'
+import Navbar from '~/components/navbar'
 
 const SinglePageLayout = ({
   image,
@@ -23,10 +22,10 @@ const SinglePageLayout = ({
   return (
     <div>
       <Navbar />
-      <div className='p-5 lg:mt-10'>
+      <div className='p-5'>
           <p className='flex items-center w-[95%] mx-auto'>
             <Link href='/'>Home</Link>{' '}
-        <ArrowRight2 size='13' color='#222222' className='mt-1' />{' '}
+        <ArrowRight2 size='13' color='#222222' className='' />{' '}
         {path.map((el) => (
           <span key={el}> {decodeURI(el)}</span>
         ))}

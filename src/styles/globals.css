@@ -1,15 +1,14 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import url('https://fonts.googleapis.com/css2?family=Kalnia:wght@100..700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Kalnia:wght@100..700&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Kalnia:wght@100..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Kalnia:wght@100..700&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap");
 
-*{
-  
+* {
   font-family: Urbanist;
 }
-body{
-  background-color: #FFBFB140;
+body {
+  background-color: #ffbfb140;
 }
 
 .label {
@@ -23,7 +22,7 @@ body{
 /* .label::after {
     content: attr(for)
   } */
-  input {
+input {
   display: none;
 }
 .label::before {
@@ -37,23 +36,23 @@ body{
 }
 /* Define color styles for each label */
 [for="green"]::before {
-  background-color: #00C12B;
+  background-color: #00c12b;
 }
 
 [for="red"]::before {
-  background-color: #F50606;
+  background-color: #f50606;
 }
 
 [for="yellow"]::before {
-  background-color: #F5DD06;
+  background-color: #f5dd06;
 }
 
 [for="orange"]::before {
-  background-color: #F57906;
+  background-color: #f57906;
 }
 
 [for="light-blue"]::before {
-  background-color: #06CAF5;
+  background-color: #06caf5;
 }
 
 [for="blue"]::before {
@@ -61,11 +60,11 @@ body{
 }
 
 [for="purple"]::before {
-  background-color: #7D06F5;
+  background-color: #7d06f5;
 }
 
 [for="pink"]::before {
-  background-color: #F506A4;
+  background-color: #f506a4;
 }
 
 [for="white"]::before {
@@ -76,15 +75,26 @@ body{
   background-color: black;
 }
 
-
 .shop {
-       animation: spin 10s linear infinite;
-     }
-     @keyframes spin {
-       from {
-         transform: rotate(0deg);
-       }
-       to {
-         transform: rotate(360deg);
-       }
-     }
+  animation: spin 10s linear infinite;
+}
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 768px) {
+  .label::before {
+    display: inline-block;
+    content: "";
+    width: 1.7rem;
+    height: 1.7rem;
+    margin-right: 5px;
+    margin-top: 5px;
+    border-radius: 100%;
+  }
+}

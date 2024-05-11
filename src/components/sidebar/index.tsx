@@ -2,11 +2,11 @@ import { HambergerMenu, Logout } from "iconsax-react";
 import Image from "next/image";
 import Link from "next/link";
 
-import { Button, Drawer } from "@mantine/core";
+import { Button, Divider, Drawer } from "@mantine/core";
 import { useDisclosure } from "@mantine/hooks";
 
 const Sidebar = () => {
-   const [opened, { open, close }] = useDisclosure(false);
+  const [opened, { open, close }] = useDisclosure(false);
   return (
     <div>
       <Drawer
@@ -15,9 +15,9 @@ const Sidebar = () => {
         title=""
         classNames={{
           header: "",
-          content: ""
+          content: "",
         }}>
-        <div className="space-y-10">
+        <div className="space-y-20">
           <Image
             width={592}
             height={81}
@@ -26,31 +26,77 @@ const Sidebar = () => {
             alt="mid Logo"
           />
 
-          <ul className="text-center space-y-5">
+          <ul className="text-center space-y-4">
             <li>
-              <Link href="/">Home</Link>
-              </li>
-
-              <li>
-              <Link href="/wears">Wears</Link>
-              </li>
-
-              <li>
-              <Link href="/shoes">Shoes</Link>
-              </li>
-
-              <li>
-              <Link href="/bags">Bags</Link>
-              </li>
-              <li>
-              <Link href="/perfumes">Perfumes</Link>
-              </li>
+              <Link
+                href="/"
+                onClick={close}>
+                Home
+              </Link>
+            </li>
+            <Divider />
+            <li>
+              <Link
+                href="/wears"
+                onClick={close}>
+                Wears
+              </Link>
+            </li>
+            <Divider />
+            <li>
+              <Link
+                href="/shoes"
+                onClick={close}>
+                Shoes
+              </Link>
+            </li>
+            <Divider />
+            <li>
+              <Link
+                href="/bags"
+                onClick={close}>
+                Bags
+              </Link>
+            </li>
+            <Divider />
+            <li>
+              <Link
+                href="/perfumes"
+                onClick={close}>
+                Perfumes
+              </Link>
+            </li>
+            <Divider />
           </ul>
 
-          <Button className="!flex !justify-between mx-auto !text-black !bg-zamat-background-light">
-            <Logout size="20" color="black"/>
-            Logout
-          </Button>
+          <div className="space-y-5">
+            <h1 className="text-center text-[1.125rem] uppercase font-semibold">
+              Accout
+            </h1>
+            <ul className="text-center space-y-3">
+              <li>
+                <Link
+                  href="/"
+                  onClick={close}>
+                  Orders
+                </Link>
+              </li>
+              <Divider />
+              <li className="flex  gap-2 justify-center">
+                <Link
+                  href="/login"
+                  onClick={close}>
+                  Login
+                </Link>
+                /
+                <Link
+                  href="/sign-up"
+                  onClick={close}>
+                  Sign Up
+                </Link>
+              </li>
+            </ul>
+          </div>
         </div>
       </Drawer>
 
@@ -63,6 +109,6 @@ const Sidebar = () => {
       />
     </div>
   );
-}
+};
 
-export default Sidebar
+export default Sidebar;

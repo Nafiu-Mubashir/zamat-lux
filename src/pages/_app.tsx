@@ -29,9 +29,9 @@ export default function App({ Component, pageProps }: AppPropsWithLayout) {
       <MantineProvider theme={theme}>
         <div className="bg-zamat-background-light">
           {getLayout(<Component {...pageProps} />)}
-        </div>
 
         <Footer />
+        </div>
       </MantineProvider>
     </QueryParamProvider>
   );

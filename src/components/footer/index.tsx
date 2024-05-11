@@ -14,8 +14,8 @@ const Footer = () => {
   ];
   const faq = ["Account", "Manage Deliveries", "Orders", "Payments"];
   return (
-    <footer className="bg-white lg:py-10 relative w-full top-[15rem] border border-blue-400">
-      <div className="mx-auto w-[90%] lg:p-4 py-6 lg:py-8 space-y-10 mt-20">
+    <footer className="bg-white lg:py-10 relative w-full top-[15rem]">
+      <div className="mx-auto w-[90%] p-2 lg:p-4 py-16 lg:py-8 space-y-10 mt-20">
         <Grid>
           <Grid.Col span={{ base: 12, xs: 4, lg: 3 }}>
             <div className="mb-6 md:mb-0 space-y-4">
@@ -140,7 +140,7 @@ const Footer = () => {
         </div>
       </div>
 
-      <div className="bg-black rounded-xl lg:rounded-3xl py-2 lg:px-[3rem] w-[95%] lg:w-[90%] h-[14rem] lg:h-[12.5rem] mx-auto absolute right-0 left-0 top-[-150px] lg:top-[-80px] ">
+      <div className="bg-black rounded-xl lg:rounded-3xl py-2 lg:px-[3rem] w-[90%] lg:w-[90%] min-h-[14rem] lg:h-[12.5rem] mx-auto absolute right-0 left-0 top-[-150px] lg:top-[-80px] ">
         <Grid align="center">
           <Grid.Col span={{ base: 12, lg: 8 }}>
             <h1 className="font-[600] text-center lg:text-left text-[1.484rem] lg:text-[3rem] text-white w-full lg:w-[41.731rem]">
