@@ -8,7 +8,7 @@ const HeroSection = () => {
       <div className="bg-zamat-main">
         <Navbar />
 
-        <div className="mx-auto w-full p-3 md:ps-0 md:w-[95%] py-4 space-y-6">
+        <div className="mx-auto mt-10 w-full p-3 md:ps-0 md:w-[95%] py-4 space-y-6">
           <div>
             <Image
               src="/header-desktop.svg"
