@@ -1,8 +1,9 @@
-import { ProfileCircle, SearchNormal1, ShoppingCart } from "iconsax-react";
+import { ProfileCircle, SearchNormal1 } from "iconsax-react";
 import Image from "next/image";
 import Link from "next/link";
 import React, { useEffect, useRef, useState } from "react";
 
+import Cart from "../cart";
 import Sidebar from "../sidebar";
 import { NavLink } from "./navLink";
 
@@ -96,11 +97,7 @@ const Navbar = () => {
             className="cursor-pointer"
           />
 
-          <ShoppingCart
-            size="20"
-            color="#FB5B39"
-            className="cursor-pointer"
-          />
+          <Cart />
 
           <ProfileCircle
             size="20"

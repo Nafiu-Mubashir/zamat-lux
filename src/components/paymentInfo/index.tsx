@@ -32,7 +32,7 @@ const PaymentInfo = () => {
               size="md"
               className="lg:!w-[15.125rem]"
               classNames={{
-                input: "focus:!border-zamat-border-color",
+                input: "focus:!border-zamat-border-color placeholder:!text-[0.6rem]",
               }}
             />
             <Button
@@ -85,7 +85,7 @@ const PaymentInfo = () => {
               size="md"
               className=""
               classNames={{
-                input: "focus:!border-zamat-border-color",
+                input: "focus:!border-zamat-border-color placeholder:!text-[0.6rem]",
                 label: "!text-[0.509rem] md:!text-[0.875rem]",
               }}
             />
@@ -97,7 +97,7 @@ const PaymentInfo = () => {
               size="md"
               className=""
               classNames={{
-                input: "focus:!border-zamat-border-color",
+                input: "focus:!border-zamat-border-color placeholder:!text-[0.6rem]",
                 label: "!text-[0.509rem] md:!text-[0.875rem]",
               }}
               hideControls
@@ -125,7 +125,7 @@ const PaymentInfo = () => {
                 hideControls
                 size="md"
                 classNames={{
-                  input: "focus:!border-zamat-border-color",
+                  input: "focus:!border-zamat-border-color placeholder:!text-[0.6rem]",
                   label: "!text-[0.509rem] md:!text-[0.875rem]",
                 }}
               />
