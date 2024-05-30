@@ -8,30 +8,23 @@ const HeroSection = () => {
       <div className="bg-zamat-main">
         <Navbar />
 
-        <div className="mx-auto mt-10 w-full p-3 md:ps-0 md:w-[95%] py-4 space-y-6">
+        <div className="mx-auto mt-10 w-full p-3 md:ps-0 md:w-[95%] py-4 space-y-6  overflow-hidden">
           <div>
             <Image
               src="/header-desktop.svg"
               width={1100}
               height={211}
               alt="Hero image"
-              className="hidden md:block mx-auto w-[95%]"
-            />
-            <Image
-              src="/header-mobile.svg"
-              width={365}
-              height={97}
-              alt="Hero image"
-              className="md:hidden block mx-auto w-[95%]"
+              className="hidde md:block mx-auto w-[95%]"
             />
           </div>
-          <div className="flex justify-evenly md:items-center gap-">
+          <div className="flex justify-center md:justify-evenly items-center relative">
             <Image
               src="/home/men.png"
               width={301}
               height={326}
               alt="Hero image"
-              className="w-[8rem] md:w-auto h-[8rem] md:h-[10rem] lg:h-auto mt-[-40px] md:mt-0"
+              className="w-[8rem] md:w-auto h-[8rem] md:h-[10rem] lg:h-auto absolute left-[-2.5rem] md:relative"
             />
             <div className="relative hidde md:block">
               <Image
@@ -39,7 +32,7 @@ const HeroSection = () => {
                 width={364}
                 height={584}
                 alt="Hero image"
-                className="w-[10.348rem] lg:w-[21.875rem] h-[16.911rem] lg:h-[35.748rem] mt-[100px] md:mt-0"
+                className="w-[10rem] lg:w-[21.875rem] h-[16.911rem] lg:h-[35.748rem]"
               />
 
               <Image
@@ -47,7 +40,7 @@ const HeroSection = () => {
                 width={162}
                 height={161}
                 alt="Hero image"
-                className="w-[3.5rem] lg:w-[7rem] h-[3.5rem] lg:h-[7rem] absolute top-[250px] md:top-[150px] lg:top-[300px] right-[-25px] lg:right-[-45px] shop"
+                className="w-[3.5rem] lg:w-[7rem] h-[3.5rem] lg:h-[7rem] absolute top-[150px] md:top-[150px] lg:top-[300px] right-[-25px] lg:right-[-45px] shop"
               />
             </div>
             <Image
@@ -55,7 +48,7 @@ const HeroSection = () => {
               width={288}
               height={301}
               alt="Hero image"
-              className="w-[7.211rem] md:w-auto lg:w-auto h-[6rem] md:h-[10rem] lg:h-auto"
+              className="w-[7.211rem] md:w-auto lg:w-auto h-[7.53rem] md:h-[10rem] lg:h-auto absolute right-[-2.5rem] md:relative"
             />
           </div>
         </div>

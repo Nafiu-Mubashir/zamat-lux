@@ -5,24 +5,21 @@ import ProductCard from "~/components/productCard";
 import SinglePageLayout from "~/layout";
 
 import { Grid, Pagination } from "@mantine/core";
+import { addToCart } from "~/hook/cart";
 
 const Perfumes = () => {
   const wear = [
     {
-      img: "/wears/wear1.png",
+      img: "/perfume.png",
       name: "Gucci Bag",
     },
     {
-      img: "/wears/wear2.png",
+      img: "/new-arrivals/perfume.png",
       name: "Court Heels",
     },
     {
-      img: "/wears/wear3.png",
+      img: "/top-selling/perfume.png",
       name: "Jordan VIII’s",
-    },
-    {
-      img: "/wears/wear4.png",
-      name: "Versace Eros",
     },
   ];
   return (
@@ -51,14 +48,13 @@ const Perfumes = () => {
           <div>
             <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
               {wear.map(({ name, img }, id) => (
-                <Link
-                  href={`/wears/${id}`}
-                  key={id}>
-                  <ProductCard
-                    name={name}
-                    img={img}
-                  />
-                </Link>
+                <ProductCard
+                  href={`/products/${id}`}
+                  key={id}
+                  name={name}
+                  img={img}
+                  onClick={addToCart}
+                />
               ))}
             </div>
 

@@ -5,6 +5,7 @@ import ProductCard from "~/components/productCard";
 import SinglePageLayout from "~/layout";
 
 import { Grid, Pagination } from "@mantine/core";
+import { addToCart } from "~/hook/cart";
 
 const Wears = () => {
   const wear = [
@@ -53,14 +54,13 @@ const Wears = () => {
             <div className="">
               <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
                 {wear.map(({ name, img }, id) => (
-                  <Link
-                    href={`/wears/${id}`}
-                    key={id}>
-                    <ProductCard
-                      name={name}
-                      img={img}
-                    />
-                  </Link>
+                  <ProductCard
+                    href={`/products/${id}`}
+                    key={id}
+                    name={name}
+                    img={img}
+                    onClick={addToCart}
+                  />
                 ))}
               </div>
 

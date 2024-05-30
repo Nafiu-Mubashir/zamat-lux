@@ -4,8 +4,9 @@ import ProductCard from "~/components/productCard";
 import HeroSection from "~/sections/home-section/heroSection";
 
 import { Button, Grid } from "@mantine/core";
+import { addToCart } from "~/hook/cart";
 
-const inter = Inter({ subsets: ["latin"] });
+// const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
   const newArrivals = [
@@ -55,9 +56,11 @@ export default function Home() {
           <div className="flex justify-between gap-4 overflow-x-scroll lg:overflow-hidden py-3">
             {newArrivals.map(({ name, img }, id) => (
               <ProductCard
+                href="/products"
                 name={name}
                 img={img}
                 key={id}
+                onClick={addToCart}
               />
             ))}
           </div>
@@ -112,10 +115,11 @@ export default function Home() {
           <div className="flex justify-between gap-4 overflow-x-scroll lg:overflow-hidden py-3">
             {topSelling.map(({ name, img }, id) => (
               <ProductCard
+                href="/products"
                 name={name}
                 img={img}
                 key={id}
-              />
+                onClick={addToCart} />
             ))}
           </div>
 

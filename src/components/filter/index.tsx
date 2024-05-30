@@ -1,6 +1,7 @@
+import { usePathname } from 'next/navigation';
 import React, { useState } from 'react'
 
-import { Button, Checkbox, Divider } from '@mantine/core';
+import { Button, Checkbox, Divider, NumberInput } from '@mantine/core';
 
 interface Color {
   id: string;
@@ -8,39 +9,52 @@ interface Color {
 }
 
 const ProductFilter = () => {
-    const sizes = [
-      "XX-Small",
-      "X-Small",
-      "Small",
-      "Medium",
-      "Large",
-      "X-Large",
-      "XX-Large",
-      "3X-Large",
-      "4X-Large",
-    ];
+  const pathname = usePathname();
+  const wearsSizes = [
+    "XX-Small",
+    "X-Small",
+    "Small",
+    "Medium",
+    "Large",
+    "X-Large",
+    "XX-Large",
+    "3X-Large",
+    "4X-Large",
+  ];
 
-    const colors: Color[] = [
-      { id: "green", hueRotate: "120deg" }, // Green
-      { id: "red", hueRotate: "0deg" }, // Red
-      { id: "yellow", hueRotate: "60deg" }, // Yellow
-      { id: "orange", hueRotate: "30deg" }, // Orange
-      { id: "light-blue", hueRotate: "180deg" }, // Light Blue
-      { id: "blue", hueRotate: "240deg" }, // Blue
-      { id: "purple", hueRotate: "280deg" }, // Purple
-      { id: "pink", hueRotate: "330deg" }, // Pink
-      { id: "white", hueRotate: "0deg" }, // White (no hue rotation)
-      { id: "black", hueRotate: "0deg" }, // Black (no hue rotation)
-    ];
+  const shoesSizes = [
+    "38",
+    "39",
+    "40",
+    "41",
+    "42",
+    "43",
+    "44",
+    "45",
+    "46",
+  ];
 
-    const wearsType = ["T-shirts", "Shorts", "Shirts", "Hoodie", "Jeans"];
+  const colors: Color[] = [
+    { id: "green", hueRotate: "120deg" }, // Green
+    { id: "red", hueRotate: "0deg" }, // Red
+    { id: "yellow", hueRotate: "60deg" }, // Yellow
+    { id: "orange", hueRotate: "30deg" }, // Orange
+    { id: "light-blue", hueRotate: "180deg" }, // Light Blue
+    { id: "blue", hueRotate: "240deg" }, // Blue
+    { id: "purple", hueRotate: "280deg" }, // Purple
+    { id: "pink", hueRotate: "330deg" }, // Pink
+    { id: "white", hueRotate: "0deg" }, // White (no hue rotation)
+    { id: "black", hueRotate: "0deg" }, // Black (no hue rotation)
+  ];
 
-    const [selectedColor, setSelectedColor] = useState<string | null>(null);
+  const wearsType = ["T-shirts", "Shorts", "Shirts", "Hoodie", "Jeans"];
 
-    const handleColorChange = (colorId: string) => {
-      setSelectedColor(colorId);
-      console.log(colorId);
-    };
+  const [selectedColor, setSelectedColor] = useState<string | null>(null);
+
+  const handleColorChange = (colorId: string) => {
+    setSelectedColor(colorId);
+    console.log(colorId);
+  };
   return (
     <div>
       <div className="rounded-2xl border border-zamat-main p-4 space-y-3">
@@ -82,21 +96,34 @@ const ProductFilter = () => {
 
         <div className="space-y-2">
           <h1 className="font-semibold">Price</h1>
-          <div className="flex flex-wrap gap-2">
-            {/* {colors.map((color) => (
-                  <div key={color.id}>
-                    <input
-                      type="radio"
-                      name="color"
-                      id={color.id}
-                      onChange={() => handleColorChange(color.id)}
-                      className="hidden"
-                    />
-                    <label
-                      htmlFor={color.id}
-                      className="label"></label>
-                  </div>
-                ))} */}
+          <div className="flex items-center gap-2">
+            <NumberInput
+              placeholder="$34"
+              radius={"sm"}
+              size="md"
+              className=""
+              classNames={{
+                input: "focus:!border-zamat-border-color placeholder:!text-[0.6rem]",
+                label: "",
+              }}
+              hideControls
+            />
+
+            <svg width="37" height="9" viewBox="0 0 37 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M5.53178 0.219827C5.60162 0.289488 5.65702 0.372242 5.69483 0.46335C5.73263 0.554457 5.75209 0.652128 5.75209 0.750768C5.75209 0.849408 5.73263 0.947079 5.69483 1.03819C5.65702 1.12929 5.60162 1.21205 5.53178 1.28171L3.06155 3.75043H10.2502C10.4491 3.75043 10.6399 3.82944 10.7805 3.97008C10.9212 4.11071 11.0002 4.30146 11.0002 4.50035C11.0002 4.69924 10.9212 4.88998 10.7805 5.03062C10.6399 5.17126 10.4491 5.25027 10.2502 5.25027H3.06155L5.53178 7.71899C5.67259 7.8598 5.7517 8.05079 5.7517 8.24993C5.7517 8.44907 5.67259 8.64006 5.53178 8.78087C5.39096 8.92168 5.19998 9.00079 5.00084 9.00079C4.8017 9.00079 4.61071 8.92168 4.4699 8.78087L0.720316 5.03129C0.650479 4.96163 0.595071 4.87887 0.557266 4.78777C0.51946 4.69666 0.5 4.59899 0.5 4.50035C0.5 4.40171 0.51946 4.30404 0.557266 4.21293C0.595071 4.12182 0.650479 4.03907 0.720316 3.96941L4.4699 0.219827C4.53956 0.14999 4.62231 0.094582 4.71342 0.0567766C4.80453 0.0189711 4.9022 -0.000488281 5.00084 -0.000488281C5.09948 -0.000488281 5.19715 0.0189711 5.28826 0.0567766C5.37936 0.094582 5.46212 0.14999 5.53178 0.219827ZM31.4682 0.219827C31.5379 0.14999 31.6206 0.094582 31.7117 0.0567766C31.8029 0.0189711 31.9005 -0.000488281 31.9992 -0.000488281C32.0978 -0.000488281 32.1955 0.0189711 32.2866 0.0567766C32.3777 0.094582 32.4604 0.14999 32.5301 0.219827L36.2797 3.96941C36.3495 4.03907 36.4049 4.12182 36.4427 4.21293C36.4805 4.30404 36.5 4.40171 36.5 4.50035C36.5 4.59899 36.4805 4.69666 36.4427 4.78777C36.4049 4.87887 36.3495 4.96163 36.2797 5.03129L32.5301 8.78087C32.3893 8.92168 32.1983 9.00079 31.9992 9.00079C31.8 9.00079 31.609 8.92168 31.4682 8.78087C31.3274 8.64006 31.2483 8.44907 31.2483 8.24993C31.2483 8.05079 31.3274 7.8598 31.4682 7.71899L33.9384 5.25027H26.7497C26.5509 5.25027 26.3601 5.17126 26.2195 5.03062C26.0788 4.88998 25.9998 4.69924 25.9998 4.50035C25.9998 4.30146 26.0788 4.11071 26.2195 3.97008C26.3601 3.82944 26.5509 3.75043 26.7497 3.75043H33.9384L31.4682 1.28171C31.3984 1.21205 31.343 1.12929 31.3052 1.03819C31.2674 0.947079 31.2479 0.849408 31.2479 0.750768C31.2479 0.652128 31.2674 0.554457 31.3052 0.46335C31.343 0.372242 31.3984 0.289488 31.4682 0.219827Z" fill="black" />
+            </svg>
+
+            <NumberInput
+              placeholder="$234"
+              radius={"sm"}
+              size="md"
+              className=""
+              classNames={{
+                input: "focus:!border-zamat-border-color placeholder:!text-[0.6rem]",
+                label: "",
+              }}
+              hideControls
+            />
           </div>
         </div>
 
@@ -124,18 +151,39 @@ const ProductFilter = () => {
 
         <Divider my={"md"} />
 
-        <div className="space-y-2">
-          <h1 className="font-semibold">Size</h1>
-          <div className="md:grid md:grid-cols-2 lg:flex lg:flex-wrap gap-2 ">
-            {sizes.map((item, id) => (
-              <div
-                key={id}
-                className="text-center border bg-[#EBE8E7] rounded-full p-1 lg:p-2 w-[4.5rem] lg:w-[6.188rem] text-[0.7rem] lg:text-[0.875rem]">
-                {item}
+        {
+          pathname === '/wears' && (
+            <div className="space-y-2">
+              <h1 className="font-semibold">Size</h1>
+              <div className="md:grid md:grid-cols-2 lg:flex lg:flex-wrap gap-2 ">
+                {wearsSizes.map((item, id) => (
+                  <div
+                    key={id}
+                    className="text-center border bg-[#EBE8E7] rounded-full p-1 lg:p-2 w-[4.5rem] lg:w-[6.188rem] text-[0.7rem] lg:text-[0.875rem]">
+                    {item}
+                  </div>
+                ))}
               </div>
-            ))}
-          </div>
-        </div>
+            </div>
+          )
+        }
+
+        {
+          pathname === '/shoes' && (
+            <div className="space-y-2">
+              <h1 className="font-semibold">Size</h1>
+              <div className="md:grid md:grid-cols-2 lg:flex lg:flex-wrap gap-2 ">
+                {shoesSizes.map((item, id) => (
+                  <div
+                    key={id}
+                    className="text-center border bg-[#EBE8E7] rounded-full p-1 lg:p-2 text-[0.7rem] lg:text-[0.875rem]  w-[2rem] h-[2rem] flex justify-center items-center cursor-pointer hover:bg-black hover:text-white">
+                    {item}
+                  </div>
+                ))}
+              </div>
+            </div>
+          )
+        }
         <Button
           classNames={{
             root: "!bg-black !w-full",
