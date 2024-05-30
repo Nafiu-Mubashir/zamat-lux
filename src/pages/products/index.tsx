@@ -40,7 +40,7 @@ const Products = () => {
                     className="!p-3 !space-y-3">
                     <div className="p-3 md:p-0 space-y-3">
                         <div className="flex justify-between items-center">
-                            <h1 className="font-bold">Wears</h1>
+                            <h1 className="font-bold">Products</h1>
 
                             <div className="flex gap-2 text-[0.563rem] lg:text-[0.825rem] items-ceenter">
                                 <p>Showing 1-10 of 100 Products</p>

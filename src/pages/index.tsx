@@ -5,6 +5,7 @@ import HeroSection from "~/sections/home-section/heroSection";
 
 import { Button, Grid } from "@mantine/core";
 import { addToCart } from "~/hook/cart";
+import Link from "next/link";
 
 // const inter = Inter({ subsets: ["latin"] });
 
@@ -65,11 +66,13 @@ export default function Home() {
             ))}
           </div>
 
-          <Button
-            className="!bg-white !border !border-black !text-black !block mx-auto !px-12"
-            radius={100}>
-            View All
-          </Button>
+          <Link href={'/products'}>
+            <Button
+              className="!bg-white !mt-10 !border !border-black !text-black !block mx-auto !px-12"
+              radius={100}>
+              View All
+            </Button>
+          </Link>
         </div>
 
         <div className="w-full lg:w-[90%] mx-auto py-3 lg:p-6 lg:rounded-3xl bg-[#FFBFB180]">
@@ -123,11 +126,13 @@ export default function Home() {
             ))}
           </div>
 
-          <Button
-            className="!bg-white !border !border-black !text-black !block mx-auto !px-12"
-            radius={100}>
-            View All
-          </Button>
+          <Link href={'/products'}>
+            <Button
+              className="!bg-white !mt-10 !border !border-black !text-black !block mx-auto !px-12"
+              radius={100}>
+              View All
+            </Button>
+          </Link>
         </div>
       </div>
     </main>
