@@ -5,7 +5,7 @@ import React from 'react';
 import { Divider, Drawer } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
 
-const Cart = () => {
+const Cart = ({ color }: { color: string }) => {
   const [opened, { open, close }] = useDisclosure(false);
   return (
     <div>
@@ -91,7 +91,7 @@ const Cart = () => {
 
       <ShoppingCart
         size="20"
-        color="#FB5B39"
+        color={color}
         className="cursor-pointer"
         onClick={open}
       />

@@ -7,7 +7,7 @@ import Cart from "../cart";
 import Sidebar from "../sidebar";
 import { NavLink } from "./navLink";
 
-const Navbar = () => {
+const Navbar = ({ background }: { background?: string }) => {
   const [isNavbarPosition, setIsNavbarPosition] = useState("sticky");
   const navbarRef = useRef<HTMLDivElement | null>(null);
 
@@ -46,25 +46,36 @@ const Navbar = () => {
   const [isFocused, setIsFocused] = useState(false);
   return (
     <nav
-      className={`bg-white ${isNavbarPosition} w-full z-20 top-0 start-0 lg:py-0 `}
+      className={background ? `${isNavbarPosition} w-full z-20 top-0 start-0 lg:py-0` : `bg-zamat-background-light ${isNavbarPosition} w-full z-20 top-0 start-0 lg:py-0 `}
       ref={navbarRef}>
       <header className="bg-black p-1 text-center text-white text-[0.875rem]">
         <p>Sign up and get 20% off to your first order</p>
       </header>
-      <div className="w-[95%] lg:w-[90%] mx-suto flex flex-wrap items-center justify-between mx-auto p-2 md:p-4">
+      <div className="w-[95%] lg:w-[90%] flex gap-2 items-center justify-between mx-auto p-2 md:p-4">
         <div className="block lg:hidden">
           <Sidebar />
         </div>
         <Link
           href="/"
           className="flex items-center space-x-3 rtl:space-x-reverse">
-          <Image
-            width={601}
-            height={81}
-            src="/zamat.png"
-            className="h-[1.14rem] md:h-[1.671rem] w-[8.529rem] md:w-[12.5rem]"
-            alt="Zamat lus Logo"
-          />
+          {
+            background ? 
+              <Image
+                width={601}
+                height={81}
+                src="/Zamat-logo.png"
+                className="h-[1.14rem] md:h-[1.671rem] w-[8.529rem] md:w-[12.5rem]"
+                alt="Zamat lus Logo"
+              />
+              :
+              <Image
+                width={601}
+                height={81}
+                src="/zamat.png"
+                className="h-[1.14rem] md:h-[1.671rem] w-[8.529rem] md:w-[12.5rem]"
+                alt="Zamat lus Logo"
+              />
+          }
         </Link>
 
         <div
@@ -97,30 +108,26 @@ const Navbar = () => {
 
 
 
-        {/* <form className="max-w-md mx-auto">
-          <label htmlFor="default-search" className="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white">Search</label>
+
+        <div className={"flex gap-3 md:gap-10 items-center justify-end"}>
+        <form className="max-w-md">
           <div className="relative">
-            <div className="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
-              <svg className="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20" onFocus={() => setIsFocused(true)}>
-                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z" />
-              </svg>
+            <div className="absolute inset-y-0 start-0 flex items-center ps-2 pointer-events-none">
+              <SearchNormal1
+                size=""
+                color="#FB5B39"
+                className="cursor-pointer w-[16px] md:w-[18px] h-[16px] md:h-[18px]"
+              />
             </div>
-            <input type="search" id="default-search" className={isFocused ? `animate block w-full p-4 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500` : "not-animate"} placeholder="Search Mockups, Logos..."  />
+              <input type="search" id="default-search" className={isFocused == false ? `block w-[1px] h-[1.875rem] md:h-[2.188rem] px-4 rounded-full focus:outline-none cursor-pointer` : `block md:w-full p-1 md:p-2 ps-6 md:ps-10 text-sm text-gray-900 border border-white rounded-full bg-white focus:ring-gray-300 focus:border-gray-300 focus:outline-none`} placeholder="Search for product..." onClick={() => setIsFocused(!isFocused)} />
           </div>
-        </form> */}
+        </form>
 
-        <div className="flex gap-3 md:gap-10">
-          <SearchNormal1
-            size="20"
-            color="#FB5B39"
-            className="cursor-pointer"
-          />
-
-          <Cart />
+          <Cart color={background ? `white` : `#FB5B39`} />
 
           <ProfileCircle
             size="20"
-            color="#FB5B39"
+            color={background ? `white` : `#FB5B39`}
             className="cursor-pointer"
           />
         </div>

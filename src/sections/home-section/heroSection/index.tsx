@@ -6,7 +6,7 @@ const HeroSection = () => {
   return (
     <div>
       <div className="bg-zamat-main">
-        <Navbar />
+        <Navbar background='bg-none' />
 
         <div className="mx-auto mt-10 w-full p-3 md:ps-0 md:w-[95%] py-4 space-y-6  overflow-hidden">
           <div>
@@ -24,7 +24,7 @@ const HeroSection = () => {
               width={301}
               height={326}
               alt="Hero image"
-              className="w-[8rem] md:w-auto h-[8rem] md:h-[10rem] lg:h-auto absolute left-[-2.5rem] md:relative"
+              className="w-[8rem] md:w-auto h-[8rem] md:h-[10rem] lg:h-auto absolute left-[-3.5rem] md:relative"
             />
             <div className="relative hidde md:block">
               <Image
@@ -32,7 +32,7 @@ const HeroSection = () => {
                 width={364}
                 height={584}
                 alt="Hero image"
-                className="w-[10rem] lg:w-[21.875rem] h-[16.911rem] lg:h-[35.748rem]"
+                className="w-[8.5rem] lg:w-[21.875rem] h-[16.911rem] lg:h-[35.748rem]"
               />
 
               <Image
@@ -40,7 +40,7 @@ const HeroSection = () => {
                 width={162}
                 height={161}
                 alt="Hero image"
-                className="w-[3.5rem] lg:w-[7rem] h-[3.5rem] lg:h-[7rem] absolute top-[150px] md:top-[150px] lg:top-[300px] right-[-25px] lg:right-[-45px] shop"
+                className="w-[3rem] lg:w-[7rem] h-[3rem] lg:h-[7rem] absolute top-[150px] md:top-[150px] lg:top-[300px] right-[-20px] lg:right-[-45px] shop"
               />
             </div>
             <Image
@@ -48,7 +48,7 @@ const HeroSection = () => {
               width={288}
               height={301}
               alt="Hero image"
-              className="w-[7.211rem] md:w-auto lg:w-auto h-[7.53rem] md:h-[10rem] lg:h-auto absolute right-[-2.5rem] md:relative"
+              className="w-[7.211rem] md:w-auto lg:w-auto h-[7.53rem] md:h-[10rem] lg:h-auto absolute right-[-3.5rem] md:relative"
             />
           </div>
         </div>

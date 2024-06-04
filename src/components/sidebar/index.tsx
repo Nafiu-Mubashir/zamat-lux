@@ -102,9 +102,9 @@ const Sidebar = () => {
 
       {/* <Button >Open Drawer</Button> */}
       <HambergerMenu
-        size="32"
+        size=""
         color="black"
-        className="block lg:hidden"
+        className="block lg:hidden w-[1.5rem] h-[1.5rem]"
         onClick={open}
       />
     </div>

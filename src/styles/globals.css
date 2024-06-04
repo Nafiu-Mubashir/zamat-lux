@@ -90,7 +90,9 @@ input {
 }
 
 .animate input[type=text] {
-  width: 100%;
+ width: 130px;
+  -webkit-transition: spin 0.4s ease-in-out;
+  transition: spin 0.4s ease-in-out;
 }
 @keyframes spin {
   from {
